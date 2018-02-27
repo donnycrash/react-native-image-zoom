@@ -122,6 +122,10 @@ export class Props {
   public layoutChange?: (event?: object) => void = () => {
     //
   }
+
+  public isPanning?: (isPanning?: boolean) => void = () => {
+    //
+  }
 }
 
 export class State {

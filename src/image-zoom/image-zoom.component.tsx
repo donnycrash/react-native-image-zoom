@@ -235,6 +235,9 @@ export default class ImageViewer extends React.Component<Props, State> {
           }
 
           if (this.props.panToMove) {
+            if (this.props.isPanning) {
+              this.props.isPanning(this.props.imageWidth * this.scale > this.props.cropWidth)
+            }
             // diffX > 0 表示手往右滑，图往左移动，反之同理
             // horizontalWholeOuterCounter > 0 表示溢出在左侧，反之在右侧，绝对值越大溢出越多
             if (this.props.imageWidth * this.scale > this.props.cropWidth) {

@@ -70,7 +70,8 @@ export default class App extends React.Component {
 | longPressTime | number | long press threshold | 800 |
 | onLongPress | ()=>void | on longPress | ()=> {} |
 | doubleClickInterval | number | time allocated for second click to be considered as doublClick event | 175 |
-| onMove | (object)=>void | reports movement position data (helpful to build overlays) | ()=> {} |  
+| onMove | (object)=>void | reports movement position data (helpful to build overlays) | ()=> {} |
+| isPanning | (boolean)=>void | reports whether or not a user is panning whilst zoomed (useful for disabling scrollviews) | ()=> {} |
 | centerOn | { x: number, y: number, scale: number, duration: number } | if given this will cause the map to pan and zoom to the desired location | undefined
 
 ## Development pattern
