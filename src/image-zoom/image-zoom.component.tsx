@@ -88,7 +88,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.imagePanResponder = PanResponder.create({
       // 要求成为响应者：
       onStartShouldSetPanResponder: (evt, gestureState) => setResponder,
-      onPanResponderTerminationRequest: (evt, gestureState) => false,
+      onPanResponderTerminationRequest: (evt, gestureState) => true,
 
       onPanResponderGrant: (evt, gestureState) => {
         // 开始手势操作
